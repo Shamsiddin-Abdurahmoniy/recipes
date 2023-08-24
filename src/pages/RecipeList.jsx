@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 // hooks
 import useFetch from "../hooks/useFetch";
+// loader
+import { DotPulse } from "@uiball/loaders";
 
 function RecipeList() {
   const [url, setUrl] = useState("http://localhost:3000/recipes");
@@ -10,6 +12,11 @@ function RecipeList() {
 
   return (
     <ul className="container max-w-5xl mx-auto flex justify-between flex-wrap">
+      {isPending && (
+        <div className="overlay">
+          <DotPulse size={80} s speed={1.3} color="white" />
+        </div>
+      )}
       {recipes &&
         recipes.map((recipe) => {
           const { title, cookingTime, image, ingredients, method } = recipe;

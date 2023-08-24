@@ -11,6 +11,8 @@ import RecipeLayout from "./layout/RecipeLayout";
 // pages
 import RecipeList from "./pages/RecipeList";
 import RecipeItem from "./pages/RecipeItem";
+// components
+import PageNotFound from "./components/PageNotFound";
 function App() {
   const routes = createBrowserRouter(
     createRoutesFromElements(
@@ -19,6 +21,7 @@ function App() {
           <Route index element={<RecipeList />} />
           <Route path="recipes/:id" element={<RecipeItem />} />
         </Route>
+        <Route path="*" element={<PageNotFound />} />
       </Route>
     )
   );
