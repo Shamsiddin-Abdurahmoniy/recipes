@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { BsStopwatchFill } from "react-icons/bs";
-import { PiForkKnifeBold } from "react-icons/pi";
+import { DotPulse } from "@uiball/loaders";
 import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 function RecipeItem() {
@@ -10,6 +10,11 @@ function RecipeItem() {
   console.log(recipe);
   return (
     <article className="container max-w-5xl mx-auto flex items-center">
+      {isPending && (
+        <div className="overlay">
+          <DotPulse size={80} s speed={1.3} color="#a6c88c" />
+        </div>
+      )}
       {recipe && (
         <>
           <img

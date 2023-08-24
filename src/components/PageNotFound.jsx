@@ -7,7 +7,7 @@ function PageNotFound() {
         className="
       font-semibold text-orange-900 text-2xl"
       >
-        Woops.Looks like this page doesn't exist
+        Woops.Looks like this page doesn't exist😥
       </h4>
       <Link
         className="mt-5 text-xl font-medium text-yellow-500 underline font-bold"

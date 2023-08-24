@@ -14,7 +14,7 @@ function RecipeList() {
     <ul className="container max-w-5xl mx-auto flex justify-between flex-wrap">
       {isPending && (
         <div className="overlay">
-          <DotPulse size={80} s speed={1.3} color="white" />
+          <DotPulse size={80} s speed={1.3} color="#a6c88c" />
         </div>
       )}
       {recipes &&
