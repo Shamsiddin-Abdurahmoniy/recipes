@@ -1,5 +1,5 @@
 // icons
-import { GiCampCookingPot } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -11,9 +11,12 @@ function Header() {
             recipes
           </span>
         </a>
-        <button className="border-2 border-black font-ink uppercase font-bold py-3 px-4 rounded-xl bg-black text-1xl text-white hover:bg-white hover:text-black duration-500 ">
+        <Link
+          to="/create"
+          className="border-2 border-black font-ink uppercase font-bold py-3 px-4 rounded-xl bg-black text-1xl text-white hover:bg-white hover:text-black duration-500 "
+        >
           Create
-        </button>
+        </Link>
       </div>
     </header>
   );

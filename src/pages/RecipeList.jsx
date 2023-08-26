@@ -23,7 +23,7 @@ function RecipeList() {
           return (
             <li
               key={recipe.id}
-              className="pt-3 pb-5 px-3 rounded-lg border-2 max-w-xs w-full h-full bg-white border-black
+              className="pt-3 pb-5 px-3 rounded-lg border-2 max-w-xs w-full h-full bg-white border-green-600
           "
             >
               <img

@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { BsStopwatchFill } from "react-icons/bs";
 import { DotPulse } from "@uiball/loaders";
 import { Link } from "react-router-dom";
+import { Fragment } from "react";
 import useFetch from "../hooks/useFetch";
 function RecipeItem() {
   const { id } = useParams();
@@ -43,7 +44,15 @@ function RecipeItem() {
               <h4 className="text-2xl font-bold mb-3">
                 Ingredients:{" "}
                 <span className="font-normal text-lg">
-                  <i>{recipe.ingredients}</i>
+                  {recipe.ingredients.map((ing, _, arr) => {
+                    return (
+                      <Fragment key={ing}>
+                        <i>{ing}</i>
+
+                        {arr.at(-1) == ing ? "." : ", "}
+                      </Fragment>
+                    );
+                  })}
                 </span>
               </h4>
               <h4 className="text-2xl font-bold mb-auto">
